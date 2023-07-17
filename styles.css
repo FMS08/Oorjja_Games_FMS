@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 400px;
+    margin: 30px auto;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #cdc1b4;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.score-panel {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.tries {
+    margin-top: 20px;
+    font-size: 16px;
+}

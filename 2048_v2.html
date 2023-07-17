@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2048 Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2048 Game</h1>
+        <div class="score-panel">
+            <span class="label">Score:</span>
+            <span id="score">0</span>
+        </div>
+        <div id="board" class="board"></div>
+        <div class="buttons">
+            <button id="retryButton" class="button" onclick="resetGame()">Retry</button>
+            <button id="playButton" class="button" onclick="playGame()">Play</button>
+        </div>
+        <div id="tries" class="tries">Tries: 0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
