@@ -4,6 +4,7 @@ var tries = 0;
 var rows = 4;
 var columns = 4;
 var gameActive = false;
+var tries = 0;
 
 window.onload = function() {
     setGame();
@@ -12,7 +13,7 @@ window.onload = function() {
 function setGame() {
     board = Array.from({length: rows}, () => Array.from({length: columns}, () => 0));
     score = 0;
-    tries = 0;
+    
     gameActive = false;
 
     updateScore();
@@ -227,13 +228,13 @@ function checkGameOver() {
     if (isGameWon()) {
         gameActive = false;
         document.removeEventListener('keydown', handleKeyPress);
-        document.getElementById("retryButton").disabled = true;
+        document.getElementById("retryButton").disabled = false;
         document.getElementById("playButton").disabled = true;
         document.getElementById("tries").textContent = "Congratulations! You won in " + tries + " tries.";
     } else if (!canMove()) {
         gameActive = false;
         document.removeEventListener('keydown', handleKeyPress);
-        document.getElementById("retryButton").disabled = true;
+        document.getElementById("retryButton").disabled = false;
         document.getElementById("playButton").disabled = true;
         document.getElementById("tries").textContent = "Game Over! No more moves. Try again.";
     }
@@ -272,7 +273,7 @@ function resetGame() {
         document.removeEventListener('keydown', handleKeyPress);
         document.getElementById("retryButton").disabled = false;
         document.getElementById("playButton").disabled = false;
-        document.getElementById("tries").textContent = "Tries: 0";
+        document.getElementById("tries").textContent = "Tries: ",tries;
         setGame();
     }
 }
